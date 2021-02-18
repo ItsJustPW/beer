@@ -37,6 +37,14 @@ body {
     font-weight: 200;
 }
 
+.food {
+    max-width: 50%;
+    color: black;
+    font-family: helvetica;
+    font-size: 20px;
+    font-weight: 200;
+}
+
 .beer-button {
     display: inline-flex;
 }
