@@ -1,7 +1,21 @@
 html,
 body {
     height: 100vh;
-    background-color: #FEBC58;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 120s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .container {
@@ -11,35 +25,34 @@ body {
     -ms-align-items: inherit;
     align-items: center;
     text-align: center;
-    background-color: #FEBC58;
 }
 
 .random-beer {
-    margin-top: 150px;
-    color: royalblue;
-    font-weight: 300;
+    margin-top: 100px;
+    color: white;
+    font-weight: 600;
     font-size: 40px;
     font-family: helvetica;
 }
 
 .description {
     max-width: 600px;
-    color: #000000;
+    color: whitesmoke;
     font-family: helvetica;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .abv {
     max-width: 200px;
-    color: royalblue;
+    color: whitesmoke;
     font-family: helvetica;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 200;
 }
 
 .food {
     max-width: 50%;
-    color: black;
+    color: lightcyan;
     font-family: helvetica;
     font-size: 20px;
     font-weight: 200;

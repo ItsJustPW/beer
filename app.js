@@ -22,18 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             log(data)
             const name = data[0].name
-            const description = data[0].description
+            log(name)
+            let description = data[0].description
             const abv = data[0].abv
             const food = data[0].food_pairing
-            log(food)
             const {volume} = data[0]
             const volumeValue = volume.value
             const volumeUnit = volume.unit
+            log(volume.value + " " + volume.unit)
+            log(food)
         
             randomBeer.innerHTML = name // + ' ' + volumeValue + ' ' + volumeUnit
             abvDisplay.innerHTML = abv + "%"
             descriptionDisplay.innerHTML = description
-            foodPairing.innerHTML = food
+
+            foodPairing.innerHTML = "Goes great with: " + '<br/>' + food.join('<br/>');
         })
     }
 
