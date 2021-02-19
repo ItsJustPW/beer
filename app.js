@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const descriptionDisplay = document.querySelector('.description')
     const abvDisplay = document.querySelector('.abv')
     const foodPairing = document.querySelector('.food')
-    const debug = true
+    const debug = false
 
     function log(data) {
         if (debug) {
