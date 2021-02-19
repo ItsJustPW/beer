@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             randomBeer.innerHTML = name // + ' ' + volumeValue + ' ' + volumeUnit
             abvDisplay.innerHTML = abv + "%"
             descriptionDisplay.innerHTML = description
-            foodPairing.innerHTML = '<b>' + "Goes great with: " + '</b>' + '<br/>' + food.join('<br/>');
+            foodPairing.innerHTML = '<b>' + "Goes great with: " + '</b><br/>' + food.join('<br/>');
         })
     }
 
