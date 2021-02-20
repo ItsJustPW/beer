@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const descriptionDisplay = document.querySelector('.description')
     const abvDisplay = document.querySelector('.abv')
     const foodPairing = document.querySelector('.food')
-    const debug = false
+    const url = 'https://api.punkapi.com/v2/beers?beer_name=IPA';
+    const debug = true
 
     function log(data) {
         if (debug) {
@@ -12,15 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
     function getData(e){
+
+     //   var inputVal = prompt("Please enter a Beer name", "IPA")
+
         e.preventDefault()
         
-        fetch('https://api.punkapi.com/v2/beers/random')
+        fetch(url)
         .then(response => {
             return response.json()
         })
+        
         .then(data => {
             log(data)
+            log(url)
             const name = data[0].name
             log(name)
             let description = data[0].description
